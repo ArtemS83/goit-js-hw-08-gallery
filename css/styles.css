@@ -113,7 +113,7 @@ body {
 .lightbox__button {
   position: absolute;
   top: 8px;
-  right: 28px;
+  right: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -136,5 +136,5 @@ body {
 
 .lightbox__button:hover,
 .lightbox__button:focus {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(231, 223, 223, 0.5);
 }

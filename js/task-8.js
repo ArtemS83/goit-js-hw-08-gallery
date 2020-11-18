@@ -1,13 +1,15 @@
 import galleryItems from './gallery-items.js';
-// console.log(galleryItems[0]);
+
 const galleryListRef = document.querySelector('.js-gallery');
-const bigImageRef = document.querySelector('.big-image');
+const lightboxImageRef = document.querySelector('.lightbox__image');
 const modalRef = document.querySelector('.js-lightbox');
-const closeModalBth = document.querySelector('.lightbox__button');
+const closeModalBth = document.querySelector('[data-action="close-lightbox"]');
 
 galleryListRef.insertAdjacentHTML('beforeend', getItemsMarkup(galleryItems));
+
 galleryListRef.addEventListener('click', handlerClickImages);
 closeModalBth.addEventListener('click', hendlerClosedModal);
+
 function getItemsMarkup(items) {
   return items.reduce(
     (string, { preview, original, description }) =>
@@ -35,12 +37,25 @@ function handlerClickImages(event) {
     return;
   }
   const imagesOriginal = event.target;
-  console.log(imagesOriginal);
-  bigImageRef.src = imagesOriginal.dataset.source;
-  bigImageRef.alt = imagesOriginal.alt;
+
+  hendlerOpenModal();
+  setImageOnModal(imagesOriginal);
+}
+
+function hendlerOpenModal() {
   modalRef.classList.add('is-open');
+}
+function setImageOnModal(value) {
+  lightboxImageRef.src = value.dataset.source;
+  lightboxImageRef.alt = value.alt;
 }
 
 function hendlerClosedModal() {
   modalRef.classList.remove('is-open');
+  clearAttributeImageOnModal();
+}
+
+function clearAttributeImageOnModal() {
+  lightboxImageRef.src = '';
+  lightboxImageRef.alt = '';
 }
