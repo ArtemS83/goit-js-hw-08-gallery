@@ -138,3 +138,56 @@ body {
 .lightbox__button:focus {
   background-color: rgba(231, 223, 223, 0.5);
 }
+.lightbox__handler.next {
+  position: absolute;
+  top: 50%;
+  right: -66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color var(--animation-duration) var(--timing-function),
+    transform var(--animation-duration) var(--timing-function);
+  outline: none;
+  background-image: url('../images/right-chevron.svg');
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+}
+.lightbox__handler.prev {
+  position: absolute;
+  top: 50%;
+  left: -66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color var(--animation-duration) var(--timing-function),
+    transform var(--animation-duration) var(--timing-function);
+  outline: none;
+  background-image: url('../images/left-chevron.svg');
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+}
+.lightbox__handler:hover,
+.lightbox__handler:focus {
+  background-color: rgba(231, 223, 223, 0.5);
+  transform: scale(1.25);
+}
