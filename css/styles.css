@@ -141,7 +141,7 @@ body {
 .lightbox__handler.next {
   position: absolute;
   top: 50%;
-  right: -66px;
+  right: -70px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,7 +151,7 @@ body {
   margin: 0;
   border: none;
   border-radius: 50%;
-  background-color: transparent;
+  background-color: rgba(95, 92, 92, 0.5);
   color: #fff;
   cursor: pointer;
   transition: background-color var(--animation-duration) var(--timing-function),
@@ -165,7 +165,7 @@ body {
 .lightbox__handler.prev {
   position: absolute;
   top: 50%;
-  left: -66px;
+  left: -70px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,7 +175,7 @@ body {
   margin: 0;
   border: none;
   border-radius: 50%;
-  background-color: transparent;
+  background-color: rgba(95, 92, 92, 0.5);
   color: #fff;
   cursor: pointer;
   transition: background-color var(--animation-duration) var(--timing-function),
